@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans";
+}
+
+/* buttons settings */
+
+button {
+  display: block;
+  width: fit-content;
+  background-color: transparent;
+  color: black;
+  border: 1px solid rgba(0, 0, 0, 0.416);
+  border-radius: 2em;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* header */
+
+.header {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid rgba(129, 129, 129, 0.444);
+}
+
+/* left header */
+.left-header {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.left-header div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 3em;
+}
+
+/* right banner section */
+.banner {
+  width: 50%;
+  background: url(./img/banner.jpg) center/cover;
+  height: 100%;
+}
+
+/* main section */
+
+.magna,
+.tempus {
+  display: grid;
+  align-items: center;
+  min-height: 400px;
+  border-bottom: 1px solid rgba(129, 129, 129, 0.444);
+}
+
+.magna-img {
+  background: url(./img/img-left.jpg) center/cover;
+  height: 100%;
+}
+
+.tempus-img {
+  background: url(./img/img-right.jpg) center/cover;
+  height: 100%;
+}
+
+/* magna section */
+.magna {
+  grid-template-columns: 30% 70%;
+}
+
+/* telmus section */
+
+.tempus {
+  grid-template-columns: 70% 30%;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.tempus p,
+.magna p {
+  width: 80%;
+  margin: 0 auto;
+}
+
+h2 {
+  margin-bottom: 30px;
+}
+
+p button {
+  margin-top: 30px;
+}
+
+/* footer */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  text-align: center;
+  font-weight: 300;
+  font-size: 2em;
+}
+
+form {
+  display: grid;
+  grid-template-areas: "name email" "message message" "button button";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 25% 50% 25%;
+  max-width: 500px;
+  width: 100%;
+  gap: 20px;
+}
+
+.input-div {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.input-div p {
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 14px;
+  margin: 4px 10px;
+  width: 100%;
+}
+
+.input-div:nth-child(1) {
+  grid-area: name;
+}
+
+.input-div:nth-child(2) {
+  grid-area: email;
+}
+
+.input-div:nth-child(3) {
+  grid-area: message;
+}
+
+.input-div:nth-child(4) {
+  grid-area: button;
+  margin: 0 auto;
+}
+textarea {
+  resize: none;
+  width: 100%;
+}
+
+/* socials */
+
+.socials {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.socials img {
+  width: 100%;
+  max-width: 30px;
+  cursor: pointer;
+}
+
+/* grayline */
+
+.grayline {
+  width: 80%;
+  padding: 0.2px;
+  background-color: rgba(0, 0, 0, 0.444);
+  margin: 30px 0;
+}
+
+/* media */
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 0.9em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 0.8em;
+  }
+
+  .header {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .left-header {
+    width: 100%;
+    padding: 30px 0;
+  }
+
+  .banner {
+    width: 100%;
+  }
+  form {
+    width: 90%;
+    padding: 10px;
+  }
+  textarea {
+    width: 100%;
+    margin: 0 auto;
+  }
+  input {
+    width: 100%;
+  }
+
+  .socials img {
+    width: 70%;
+  }
+
+  .socials {
+    width: 50%;
+  }
+
+  .magna {
+    grid-template-columns: 100%;
+    grid-template-rows: 60vh 100vh;
+    grid-template-areas:
+      "text"
+      "img";
+  }
+
+  .magna-img {
+    grid-area: img;
+  }
+
+  .tempus {
+    grid-template-columns: 100%;
+    grid-template-rows: 60vh 100vh;
+    margin-bottom: 40px;
+  }
+
+  h2 {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .socials {
+    width: 70%;
+  }
+}
